@@ -18,27 +18,27 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 • No Telp`
 
 //------------ BIO
-let ppown = 'https://telegra.ph/file/cce9ab4551f7150f1970d.jpg'
-let teksbio = `${htki} *BIODATA* ${htka}
-${htjava} *💌 Nama* : Yan Xiao
-${htjava} *✉️ Nama RL* : Rahasia🗿
+let ppown = 'https://telegra.ph/file/a55bc8c661f6b58842d51.jpg'
+let teksbio = `${htki} *SEKEDAR INFO* ${htka}
+${htjava} *💌 Nama* : Rama
+${htjava} *✉️ Nama RL* : Private Ya pak
 ${htjava} *♂️ Gender* : Boys
 ${htjava} *🕋 Agama* : Islam
-${htjava} *⏰ Tanggal lahir* : 15 Oktober 2004
-${htjava} *🎨 Umur* : 17
-${htjava} *🧮 Kelas* : 12
-${htjava} *🧩 Hobby* : Nonton Donghua, Chatting, Musik, Recode script bot
+${htjava} *⏰ Tanggal lahir* : 30 Oktober 2006
+${htjava} *🎨 Umur* : 15
+${htjava} *🧮 Kelas* : 10
+${htjava} *🧩 Hobby* : Nonton Donghua/anime, Chatting, Musik, Recode script bot
 ${htjava} *💬 Sifat* : Idiot, Tidak Ramah, Bilek, Prik, Nolep
-${htjava} *🗺️ Tinggal* : Indo, Tulungagung, Jawa Timur
+${htjava} *🗺️ Tinggal* : Indo, Madiun, Jawa Timur
 ${htjava} *❤️ Suka* : kucing
-${htjava} *💔 Benci* : autis, seleb
+${htjava} *💔 Benci* : autis, seleb, rasis, orang yang lebay
 
 ${htjava} *📷 ɪɴsᴛᴀɢʀᴀᴍ* : ${sig}
-${htjava} *🇫  ғᴀᴄᴇʙᴏᴏᴋ* : Fay Cat's Kun
+${htjava} *🇫  ғᴀᴄᴇʙᴏᴏᴋ* : -
 ${htjava} *🐈 ɢɪᴛʜᴜʙ:* ${sgh}
 •·––––––––––––––––––––––––––·•
 `
-  let teks = 'Pilih dibawah kak ! o(〃＾▽＾〃)o'
+  let teks = 'Pencet aja salah satu (⁠◠⁠‿⁠◕⁠)'
 const sections = [
    {
 	title: `${htjava} OWNER –––––––––·•`,
@@ -48,7 +48,7 @@ const sections = [
 	{title: "🌎 • Script", rowId: ".sc"},
 	]
     },{
-	title: `${htjava} SUPPORT ME –––––––·•`,
+	title: `JANGAN LUPA SAVE NOMOR OWNER (⁠｡⁠•̀⁠ᴗ⁠-⁠)⁠✧`,
 	rows: [
 	    {title: "💹 • Donasi", rowId: ".owner nomor"},
 	{title: "🔖 • Sewa", rowId: ".sewa"},

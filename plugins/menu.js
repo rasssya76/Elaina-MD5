@@ -16,47 +16,46 @@ const defaultMenu = {
   before: `
 ╭─────═[ INFO USER ]═─────⋆
 │╭───────────────···
-┴│☂︎ *Name:* %name
-⬡│☂︎ *Tag:* %tag
-⬡│☂︎ *Premium:* %prems
-⬡│☂︎ *Limit:* %limit
-⬡│☂︎ *Money:* %money
-⬡│☂︎ *Role:* %role
-⬡│☂︎ *Level:* %level [ %xp4levelup Xp For Levelup]
-⬡│☂︎ *Xp:* %exp / %maxexp
-┬│☂︎ *Total Xp:* %totalexp
+┴│-> *Name:* %name
+  │-> *Tag:* %tag
+  │-> *Premium:* %prems
+  │-> *Limit:* %limit
+  │-> *Money:* %money
+  │-> *Role:* %role
+  │-> *Level:* %level [ %xp4levelup Xp For Levelup]
+  │-> *Xp:* %exp / %maxexp
+┬│-> *Total Xp:* %totalexp
 │╰────────────────···
 ┠─────═[ TODAY ]═─────⋆
 │╭────────────────···
 ┴│    *${ucapan()} %name!*
-⬡│☂︎ *Tanggal:* %week %weton
-⬡│☂︎ *Date:* %date
-⬡│☂︎ *Tanggal Islam:* %dateIslamic
-┬│☂︎ *Waktu:* %time
+  │-> *Tanggal:* %week %weton
+  │-> *Date:* %date
+  │-> *Tanggal Islam:* %dateIslamic
+┬│-> *Waktu:* %time
 │╰────────────────···
 ┠─────═[ INFO BOT ]═─────⋆
 │╭────────────────···
-┴│☂︎ *Nama Bot:* %me
-⬡│☂︎ *Mode:* %mode
-⬡│☂︎ *Prefix:* [ *%_p* ]
-⬡│☂︎ *Baileys:* Multi Device
-⬡│☂︎ *Battery:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-⬡│☂︎ *Platform:* %platform
-⬡│☂︎ *Type:* Node.Js
-⬡│☂︎ *Uptime:* %muptime
-┬│☂︎ *Database:* %rtotalreg dari %totalreg
+┴│ *Nama Bot:* %me
+  │ *Mode:* %mode
+  │ ︎*Prefix:* [ *%_p* ]
+  │ ︎*Baileys:* Multi Device
+  │ *Battery:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+  │︎ *Platform:* %platform
+  │ *Type:* Node.Js
+  │︎ *Uptime:* %muptime
+┬│︎ *Database:* %rtotalreg dari %totalreg
 │╰────────────────···
-╰──────────═┅═──────────
+╰──────────═┅═─────
 
-⃝▣──「 *INFO CMD* 」───⬣
+⃝▣──「 *INFO CMD* 」
 │ *Ⓟ* = Premium
 │ *Ⓛ* = Limit
-▣────────────⬣
 %readmore
 `.trimStart(),
-  header: '⃝▣──「 %category 」───⬣',
-  body: '│○ %cmd %isPremium %islimit',
-  footer: '▣───────────⬣\n',
+  header: '⃝▣──「  *%category*  」',
+  body: '*->* %cmd %isPremium %islimit',
+  footer: '▣───⬣\n',
   after: `%c4 %me`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
@@ -257,9 +256,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
     }
     let mpt = clockString(_mpt)
 
-let usrs = db.data.users[m.sender]
-
-const sections = [
+let usrs = db.data.users[m.sender]       
+/*const sections = [
    {
 	title: `${htki} ᴍᴀɪɴ ${htka}`,
 	rows: [
@@ -303,26 +301,19 @@ const sections = [
 	]
   },
 ]
-
-let tek = `✧────···[ Dashboard ]···────✧
+*/
+let tek = `
 *${ucapan()} ${conn.getName(m.sender)}*
-╭━━━━━━━━━━━━━━━━┈─✧
-┴
-│⬡ Aktif selama ${mpt}
-│⬡ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-│⬡ Prefix : [ ${_p} ]
-│⬡ *${Object.keys(global.db.data.users).length}* Pengguna
-│⬡ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
-│⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
-┬
-├━━━━━━━━━━━━━━━━┈─⋆
-│ ▸ *ᴀᴜᴛʜᴏʀ :* ʙᴏᴄʜɪʟɢᴀᴍɪɴɢ
-┴ ▸ *ᴏᴡɴᴇʀ :* ɪᴍ-ʏᴀɴxɪᴀᴏ
-✧
-┬ 📌 𝗣𝗶𝗻𝗻𝗲𝗱 :
-│ ʙᴇʀɪ ᴊᴇᴅᴀ ʏᴀʜ ᴋᴀᴋ ^ω^
-╰━━━━━━━━━━━━━━━━┈─◂`
-const listMessage = {
+
+ Aktif selam a  ${mpt}
+│   Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+│   Prefix : [ ${_p} ]
+│   *${Object.keys(global.db.data.users).length}* Pengguna
+│   *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
+│   *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
+ɴᴏᴛᴇ👌 :
+ʙᴇʀɪ ᴊᴇᴅᴀ ᴛᴏᴅ`
+/*const listMessage = {
   text: tek,
   footer: wm2,
   mentions: await conn.parseMention(tek),
@@ -333,7 +324,8 @@ const listMessage = {
   if (teks == '404') {
   	return conn.sendMessage(m.chat, listMessage, { quoted: fkontak, mentions: await conn.parseMention(tek), contextInfo:{ forwardingScore: 99999, isForwarded: true }})
     }            
-  	
+*/
+
  /**************************** TIME *********************/
  let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
     let wibh = moment.tz('Asia/Jakarta').format('HH')
@@ -573,7 +565,52 @@ const listMessage = {
         }
      }
     })*/
-    
+    function pickRandom(list) {
+return list[Math.floor(Math.random() * list.length)]
+}            
+try {
+ppuser = await conn.profilePictureUrl(m.sender, 'image')
+} catch (err) {
+ppuser = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+}
+let url = `https://telegra.ph/file/ab1df70dfd5c2bac64da1.jpg`.trim()
+    let res = await fetch(url)
+    let buffer = await res.buffer()
+const pporang = await getBuffer(ppuser)       
+let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: pporang, surface: 200, message: `R-BOT`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}    
+  let link = `https://wa.me/message/4DCK3UGKERTGC1`
+//conn.reply('_S H O W M E N U . . . . ._')
+let buttonsh = [
+{buttonId: `/owner`, buttonText: {displayText: 'OWNER'}, type: 1}
+]
+let buttonMessage = {
+document: fs.readFileSync('./tes.xlsx'),
+mimetype: 'application/pdf',
+jpegThumbnail:buffer,
+fileName: `WA-BOT`,
+fileLength: 99999999999999,
+caption: text,
+footer: `R-BOT BY RAMA☘️`,
+buttons: buttonsh,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title: ``,
+body: `WELCOME TO MY BOT`,
+mediaType:2,
+thumbnail: pporang,
+sourceUrl: link,
+mediaUrl: link,
+}}
+}
+//conn.sendMessage(m.chat, buttonMessage, {quoted:fgclink})/*      
+ajg = fs.readFileSync('./mp3/pe.mp3')
+fakyou = fs.readFileSync('./mp3/p.mp3')
+anu1 = fs.readFileSync('./mp3/anu1.mp3')
+anu2 = fs.readFileSync('./mp3/anu2.mp3')
+anu3 = fs.readFileSync('./mp3/anu3.mp3')
+anu4 = fs.readFileSync('./mp3/anu4.mp3')
+ nyong = pickRandom([ajg, fakyou, anu1, anu2, anu3, anu4])
+//conn.sendMessage(m.chat, {audio: nyong, mimetype: 'audio/mpeg', ptt:true }, {quoted:m}) */      	
     //------------------ DOCUMENT
     let d1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
     let d2 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
@@ -582,9 +619,9 @@ const listMessage = {
     let d5 = 'application/vnd.android.package-archive'
     let d6 = 'application/zip'
     let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
-    
     // Thanks Rlxfly https://github.com/Rlxfly
     //------- MENU LOCATION
+conn.reply('_S H O W M E N U . . . . ._')
     const pre = generateWAMessageFromContent(m.chat, { liveLocationMessage:{
   degreesLatitude: 34.672314,
   degreesLongitude: 135.484802,
@@ -599,7 +636,7 @@ const listMessage = {
 }}, { quoted: m
 					})
 
-//return conn.relayMessage(m.chat, pre.message, { messageId: pre.key.id })
+conn.relayMessage(m.chat, pre.message, { messageId: pre.key.id })
 
 //-------DOC TEMPLATE
     const message = { 
@@ -677,7 +714,7 @@ handler.help = ['menu', 'help', '?']
 handler.tags = ['main']
 handler.command = /^(menu|help|\?)$/i
 
-handler.register = false
+handler.register = true
 handler.exp = 3
 
 export default handler

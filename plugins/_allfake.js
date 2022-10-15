@@ -1,9 +1,9 @@
 //By ImYanXiao
 
-import fs from 'fs'
-import fetch from 'node-fetch'
-import moment from 'moment-timezone'
-import knights from 'knights-canvas'
+const fs = require('fs')
+const fetch = require('node-fetch')
+const moment = require('moment-timezone')
+const knights = require('knights-canvas')
 
 let handler = m => m
 handler.all = async function (m) {
@@ -27,8 +27,8 @@ handler.all = async function (m) {
         
 		// Ini untuk command crator/owner
 		global.kontak2 = [
-         [owner[0], await conn.getName(owner[0] + '@s.whatsapp.net'), ' ', 'yanxiao021@gmail.com', true],
-         [owner[1], await conn.getName(owner[1] + '@s.whatsapp.net'), ' ', 'yanxiao021@gmail.com', true], // Kalo mau di tambah tinggal copy 1baris ini di tempel di bawahnya trs di edit dikit!
+         [owner[0], await conn.getName(owner[0] + '@s.whatsapp.net'), ' ', 'rassyabr6@gmail.com', true],
+         [owner[1], await conn.getName(owner[1] + '@s.whatsapp.net'), ' ', 'rassyabr6@gmail.com', true], // Kalo mau di tambah tinggal copy 1baris ini di tempel di bawahnya trs di edit dikit!
         ]
         
 		// ucapan ini mah
@@ -46,7 +46,7 @@ handler.all = async function (m) {
 					title: global.ucapan,
 					body: wm,
 					mediaUrl: sgc,
-					description: 'Elaina-MultiDevice',
+					description: 'R-BOT SIMPLE',
 					previewType: "PHOTO",
 					thumbnail: await (await fetch(thumb)).buffer(),
 					sourceUrl: "https://github.com/ImYanXiao",					
@@ -84,7 +84,7 @@ handler.all = async function (m) {
             mediaUrl: "https://Instagram.com/Xiao_yan_21",
             mediaType: "VIDEO",
             description: "https://Instagram.com/Xiao_yan_21", 
-            title: 'Elaina-MultiDevice',
+            title: 'R-BOT SIMPLE',
             body: wm,
             thumbnailUrl: pp,
             sourceUrl: sig
@@ -95,7 +95,7 @@ global.fakefb = {
             mediaUrl: "https://Facebook.com/zuck",
             mediaType: "VIDEO",
             description: "https://www.Facebook.com/zuck", 
-            title: 'Elaina-MultiDevice',
+            title: 'R-BOT SIMPLE',
             body: wm,
             thumbnailUrl: pp,
             sourceUrl: sgc
@@ -163,7 +163,7 @@ global.fakefb = {
                                "jpegThumbnail": fs.readFileSync('./thumbnail.jpg') //Gambarnye
                            },
                            "title": wm, //Kasih namalu 
-                           "description": "Elaina-MultiDevice", 
+                           "description": "R-BOT SIMPLE", 
                            "currencyCode": "USD",
                            "priceAmount1000": "20000000",
                            "retailerId": "Ghost",
@@ -196,7 +196,7 @@ global.fakefb = {
                "groupInviteMessage": {
                    "groupJid": "6285736178354-1625305606@g.us",
                    "inviteCode": "null",
-                   "groupName": "Kawan Elaina", 
+                   "groupName": "bot wea", 
                    "caption": wm, 
                    'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
                }
